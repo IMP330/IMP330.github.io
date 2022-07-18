@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Delius+Unicase&family=Roboto:wght@400;500&display=swap");
+.download,
+.like {
+  width: 40px;
+  height: 40px;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.body {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  color: white;
+}
+
+a {
+  cursor: url(../img/hand-point-up.png) 2 2, pointer;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr minmax(1170px, auto) 1fr;
+  grid-template-areas: ". content .";
+}
+
+.content {
+  grid-area: content;
+}
+.content__title {
+  font-family: "Delius Unicase", cursive;
+  font-size: 36px;
+  font-weight: 400;
+  color: #241F24;
+  text-align: center;
+  margin: 120px auto 80px auto;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(370px, 1fr));
+  grid-template-rows: repeat(3, minmax(370px, 1fr));
+  gap: 30px;
+}
+@media screen and (max-width: 992px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+.gallery__item {
+  position: relative;
+  padding-bottom: 48%;
+  border-radius: 30px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#241F24), color-stop(34.11%, rgba(91, 91, 91, 0.447552)), color-stop(62.5%, rgba(187, 186, 192, 0.26)));
+  background: -o-linear-gradient(bottom, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%);
+  background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%);
+  border-radius: 20px;
+}
+.gallery__item:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(1.04%, #241F24), color-stop(6.99%, rgba(91, 91, 91, 0.26)), color-stop(12.29%, rgba(187, 186, 192, 0)));
+  background: -o-linear-gradient(bottom, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%);
+  background: linear-gradient(0deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%);
+}
+@media screen and (max-width: 1200px) {
+  .gallery__item {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+.gallery__item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  z-index: -1;
+}
+.gallery__item_big {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+.gallery__item_megabig {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.gallery__item_long {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+@media screen and (max-width: 992px) {
+  .gallery__item_long {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}
+.gallery__item_small {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+@media screen and (max-width: 992px) {
+  .gallery__item_small {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}
+.gallery__name {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+.gallery__data {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  color: #E0E0E0;
+}
+.gallery__like {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+.gallery__download {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.content__life {
+  margin-bottom: 150px;
+}
+
+.gallery__like :hover .svg__like {
+  fill-opacity: 1;
+}
+.gallery__like:hover .path__like {
+  fill: black;
+}
+
+.gallery__download :hover .svg__download {
+  fill-opacity: 1;
+}
+.gallery__download:hover .path__download {
+  fill: black;
+}/*# sourceMappingURL=main.css.map */
